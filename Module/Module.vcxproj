@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{607c674e-952e-408b-bcf5-bf084c281983}</ProjectGuid>
+    <RootNamespace>Module</RootNamespace>
+    <WindowsTargetPlatformVersion />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>test</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;MODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);JM_XORSTR_DISABLE_AVX_INTRINSICS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:threadSafeInit-</AdditionalOptions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;MODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);JM_XORSTR_DISABLE_AVX_INTRINSICS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:threadSafeInit-</AdditionalOptions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;MODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);JM_XORSTR_DISABLE_AVX_INTRINSICS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:threadSafeInit-</AdditionalOptions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;MODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);JM_XORSTR_DISABLE_AVX_INTRINSICS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:threadSafeInit-</AdditionalOptions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Users\Nick\source\repos\DesudoV4\Module\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="config\config_file.cpp" />
+    <ClCompile Include="config\config_manager.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="fx\component.cpp" />
+    <ClCompile Include="fx\interface.cpp" />
+    <ClCompile Include="fx_game\netlibrary.h" />
+    <ClCompile Include="fx_game\resource.cpp" />
+    <ClCompile Include="fx_game\resource_manager.cpp" />
+    <ClCompile Include="fx_game\runtime.cpp" />
+    <ClCompile Include="fx_game\scripthost.cpp" />
+    <ClCompile Include="fx_game\vfs.cpp" />
+    <ClCompile Include="include\imgui\imgui.cpp" />
+    <ClCompile Include="include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="include\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="include\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="include\imgui\imgui_stdlib.cpp" />
+    <ClCompile Include="include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="include\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="scripting\runtime_manager.cpp" />
+    <ClCompile Include="scripting\vfs_hook.cpp" />
+    <ClCompile Include="ui\hook\d3d11_hook.cpp" />
+    <ClCompile Include="ui\hook\settings.cpp" />
+    <ClCompile Include="ui\menus\debug.cpp" />
+    <ClCompile Include="ui\menus\events.cpp" />
+    <ClCompile Include="ui\menus\resources.cpp" />
+    <ClCompile Include="ui\menus\lua.cpp" />
+    <ClCompile Include="util\file.cpp" />
+    <ClCompile Include="util\pattern.cpp" />
+    <ClCompile Include="util\pe.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config\config_file.h" />
+    <ClInclude Include="config\config_manager.h" />
+    <ClInclude Include="fx\component.h" />
+    <ClInclude Include="fx\event.h" />
+    <ClInclude Include="fx\interface.h" />
+    <ClInclude Include="fx\omptr.h" />
+    <ClInclude Include="fx\ref_container.h" />
+    <ClInclude Include="fx_game\resource.h" />
+    <ClInclude Include="fx_game\resource_manager.h" />
+    <ClInclude Include="fx_game\runtime.h" />
+    <ClInclude Include="fx_game\scripthost.h" />
+    <ClInclude Include="fx_game\vfs.h" />
+    <ClInclude Include="dllmain.h" />
+    <ClInclude Include="include\imgui\imconfig.h" />
+    <ClInclude Include="include\imgui\imgui.h" />
+    <ClInclude Include="include\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="include\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="include\imgui\imgui_internal.h" />
+    <ClInclude Include="include\imgui\imgui_stdlib.h" />
+    <ClInclude Include="include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\imgui\imstb_truetype.h" />
+    <ClInclude Include="include\xorstr\xorstr.hpp" />
+    <ClInclude Include="nlohmann\json.hpp" />
+    <ClInclude Include="scripting\runtime_manager.h" />
+    <ClInclude Include="scripting\vfs_hook.h" />
+    <ClInclude Include="tbb\aggregator.h" />
+    <ClInclude Include="tbb\aligned_space.h" />
+    <ClInclude Include="tbb\atomic.h" />
+    <ClInclude Include="tbb\blocked_range.h" />
+    <ClInclude Include="tbb\blocked_range2d.h" />
+    <ClInclude Include="tbb\blocked_range3d.h" />
+    <ClInclude Include="tbb\blocked_rangeNd.h" />
+    <ClInclude Include="tbb\cache_aligned_allocator.h" />
+    <ClInclude Include="tbb\combinable.h" />
+    <ClInclude Include="tbb\compat\ppl.h" />
+    <ClInclude Include="tbb\concurrent_hash_map.h" />
+    <ClInclude Include="tbb\concurrent_lru_cache.h" />
+    <ClInclude Include="tbb\concurrent_priority_queue.h" />
+    <ClInclude Include="tbb\concurrent_queue.h" />
+    <ClInclude Include="tbb\concurrent_unordered_map.h" />
+    <ClInclude Include="tbb\concurrent_unordered_set.h" />
+    <ClInclude Include="tbb\concurrent_vector.h" />
+    <ClInclude Include="tbb\critical_section.h" />
+    <ClInclude Include="tbb\enumerable_thread_specific.h" />
+    <ClInclude Include="tbb\flow_graph.h" />
+    <ClInclude Include="tbb\flow_graph_abstractions.h" />
+    <ClInclude Include="tbb\flow_graph_opencl_node.h" />
+    <ClInclude Include="tbb\gfx_factory.h" />
+    <ClInclude Include="tbb\global_control.h" />
+    <ClInclude Include="tbb\internal\_aggregator_impl.h" />
+    <ClInclude Include="tbb\internal\_concurrent_queue_impl.h" />
+    <ClInclude Include="tbb\internal\_concurrent_unordered_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_async_msg_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_body_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_cache_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_indexer_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_item_buffer_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_join_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_node_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_streaming_node.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_tagged_buffer_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_trace_impl.h" />
+    <ClInclude Include="tbb\internal\_flow_graph_types_impl.h" />
+    <ClInclude Include="tbb\internal\_mutex_padding.h" />
+    <ClInclude Include="tbb\internal\_range_iterator.h" />
+    <ClInclude Include="tbb\internal\_tbb_hash_compare_impl.h" />
+    <ClInclude Include="tbb\internal\_tbb_strings.h" />
+    <ClInclude Include="tbb\internal\_tbb_trace_impl.h" />
+    <ClInclude Include="tbb\internal\_tbb_windef.h" />
+    <ClInclude Include="tbb\internal\_template_helpers.h" />
+    <ClInclude Include="tbb\internal\_x86_eliding_mutex_impl.h" />
+    <ClInclude Include="tbb\internal\_x86_rtm_rw_mutex_impl.h" />
+    <ClInclude Include="tbb\iterators.h" />
+    <ClInclude Include="tbb\machine\gcc_arm.h" />
+    <ClInclude Include="tbb\machine\gcc_generic.h" />
+    <ClInclude Include="tbb\machine\gcc_ia32_common.h" />
+    <ClInclude Include="tbb\machine\gcc_itsx.h" />
+    <ClInclude Include="tbb\machine\ibm_aix51.h" />
+    <ClInclude Include="tbb\machine\icc_generic.h" />
+    <ClInclude Include="tbb\machine\linux_common.h" />
+    <ClInclude Include="tbb\machine\linux_ia32.h" />
+    <ClInclude Include="tbb\machine\linux_ia64.h" />
+    <ClInclude Include="tbb\machine\linux_intel64.h" />
+    <ClInclude Include="tbb\machine\macos_common.h" />
+    <ClInclude Include="tbb\machine\mac_ppc.h" />
+    <ClInclude Include="tbb\machine\mic_common.h" />
+    <ClInclude Include="tbb\machine\msvc_armv7.h" />
+    <ClInclude Include="tbb\machine\msvc_ia32_common.h" />
+    <ClInclude Include="tbb\machine\sunos_sparc.h" />
+    <ClInclude Include="tbb\machine\windows_api.h" />
+    <ClInclude Include="tbb\machine\windows_ia32.h" />
+    <ClInclude Include="tbb\machine\windows_intel64.h" />
+    <ClInclude Include="tbb\memory_pool.h" />
+    <ClInclude Include="tbb\mutex.h" />
+    <ClInclude Include="tbb\null_mutex.h" />
+    <ClInclude Include="tbb\null_rw_mutex.h" />
+    <ClInclude Include="tbb\parallel_do.h" />
+    <ClInclude Include="tbb\parallel_for.h" />
+    <ClInclude Include="tbb\parallel_for_each.h" />
+    <ClInclude Include="tbb\parallel_invoke.h" />
+    <ClInclude Include="tbb\parallel_reduce.h" />
+    <ClInclude Include="tbb\parallel_scan.h" />
+    <ClInclude Include="tbb\parallel_sort.h" />
+    <ClInclude Include="tbb\parallel_while.h" />
+    <ClInclude Include="tbb\partitioner.h" />
+    <ClInclude Include="tbb\pipeline.h" />
+    <ClInclude Include="tbb\queuing_mutex.h" />
+    <ClInclude Include="tbb\queuing_rw_mutex.h" />
+    <ClInclude Include="tbb\reader_writer_lock.h" />
+    <ClInclude Include="tbb\recursive_mutex.h" />
+    <ClInclude Include="tbb\runtime_loader.h" />
+    <ClInclude Include="tbb\scalable_allocator.h" />
+    <ClInclude Include="tbb\spin_mutex.h" />
+    <ClInclude Include="tbb\spin_rw_mutex.h" />
+    <ClInclude Include="tbb\task.h" />
+    <ClInclude Include="tbb\task_arena.h" />
+    <ClInclude Include="tbb\task_group.h" />
+    <ClInclude Include="tbb\task_scheduler_init.h" />
+    <ClInclude Include="tbb\task_scheduler_observer.h" />
+    <ClInclude Include="tbb\tbb.h" />
+    <ClInclude Include="tbb\tbbmalloc_proxy.h" />
+    <ClInclude Include="tbb\tbb_allocator.h" />
+    <ClInclude Include="tbb\tbb_config.h" />
+    <ClInclude Include="tbb\tbb_disable_exceptions.h" />
+    <ClInclude Include="tbb\tbb_exception.h" />
+    <ClInclude Include="tbb\tbb_machine.h" />
+    <ClInclude Include="tbb\tbb_profiling.h" />
+    <ClInclude Include="tbb\tbb_stddef.h" />
+    <ClInclude Include="tbb\tbb_thread.h" />
+    <ClInclude Include="tbb\tick_count.h" />
+    <ClInclude Include="ui\hook\d3d11_hook.h" />
+    <ClInclude Include="ui\hook\settings.h" />
+    <ClInclude Include="ui\menus\lua.h" />
+    <ClInclude Include="ui\menus\menus.h" />
+    <ClInclude Include="util\address.h" />
+    <ClInclude Include="util\file.h" />
+    <ClInclude Include="util\pattern.h" />
+    <ClInclude Include="util\pe.h" />
+    <ClInclude Include="util\str.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tbb.lib" />
+    <Content Include="tbb\compat\condition_variable" />
+    <Content Include="tbb\compat\thread" />
+    <Content Include="tbb\compat\tuple" />
+    <Content Include="tbb\index.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
