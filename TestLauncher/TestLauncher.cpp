@@ -15,7 +15,8 @@ DWORD find_fivem()
     {
         do
         {
-            if (std::wstring(pe.szExeFile).find(L"GTAProcess") != std::wstring::npos)
+            //if (std::wstring(pe.szExeFile).find(L"GTAProcess") != std::wstring::npos) -- idk exact reason why they renamed this process ¯\_(ツ)_/¯
+            if (std::wstring(pe.szExeFile).find(L"GameProcess") != std::wstring::npos)
             {
                 CloseHandle(snap);
                 return pe.th32ProcessID;
